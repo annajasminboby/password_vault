@@ -38,7 +38,7 @@ def main():
 
 
     print("== Centralised Secure Login Info Repository ==")
-     master_pwd = input("Enter Master Password: ")
+    master_pwd = input("Enter Master Password: ")
 
     # In real-world, you would hash and verify the master password
     if master_pwd != "admin123":
