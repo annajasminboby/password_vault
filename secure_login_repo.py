@@ -3,7 +3,6 @@ import os
 from cryptography.fernet import Fernet
 import getpass
 
-
 # === Step 1: Generate or Load AES Key ===
 def load_key():
     if not os.path.exists("secret.key"):
@@ -26,7 +25,7 @@ def load_credentials():
             return json.loads(decrypted_data)
     return {}
 
-# === Step 3: Save Credentials Securely ===
+# === Step 4: Save Credentials Securely ===
 def save_credentials(credentials):
     encrypted_data = fernet.encrypt(json.dumps(credentials).encode())
     with open("vault.json", "wb") as file:
